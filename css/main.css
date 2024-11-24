@@ -1,0 +1,208 @@
+:root {
+    --brown-color: #471F1F;
+    --bisque-color: #F3E0C7;
+    --yellow-color: #FFFE87;
+    --pink-color: #FFB2B2;
+    --gray-color: #f2f2f2;
+
+    --font-size-mobiles: 1.1em;
+}
+body {
+    background-color: var(--gray-color); /* This is a light grey color */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em; /* TODO */
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content-wrapper {
+    position: relative;
+    max-width: 1920px;
+    flex: 1;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none; /* The hamburger icon is hidden by default */
+    font-size: 34px; /* Icon size */
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.hamburger i {
+    color: var(--brown-color);
+}
+/* Optional: Add a transition for the transform */
+.hamburger, .hamburger::before {
+    transition: transform 0.3s, content 0.3s;
+}
+
+.no-scroll {
+    overflow: hidden; /* Prevent scrolling on the body */
+    height: 100%; /* Setting height to 100% can help enforce no-scrolling in some cases */
+    width: 100%; /* This can also help enforce no-scrolling */
+    position: fixed; /* Lock the position */
+}
+
+.navbar-logo img {
+    margin-left: 2px; /* Space between text and image */
+    height: 34px;
+}
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    z-index: 1000;
+}
+.navbar-nav li {
+    padding: 0 15px;
+    font-size: 25px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: var(--brown-color); 
+    font-weight: 500;
+    text-decoration: none;
+    color: black; /* Or whatever your default color is */
+    transition: font-weight 0.1s ease, border-bottom 0.1s ease, letter-spacing 0.1s ease;
+    /* Initial border-bottom is transparent to prevent layout shift */
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:focus { /* focus is for accessibility */
+    /*font-weight: 700; */
+    border-bottom: 3px solid var(--pink-color); /* Your chosen color for the underline */
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    margin: 0;
+    background-color: var(--brown-color); /* Example dark brown background */
+    flex-wrap: wrap; /* Ensure content can wrap as needed */
+}
+
+.footer-logo {
+    display: flex;
+    color: var(--pink-color); /* White color for the logo text */
+}
+.footer-logo img {
+    margin-left: 2px; /* Space between text and image */
+    height: 34px;
+}
+
+.footer-logo span {
+    font-style: italic;
+}
+
+.footer-social {
+    display: flex;
+}
+
+.footer-social a {
+    color: var(--pink-color); /* White color for the icons */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 30px; /* Example size for social icons */
+}
+
+.footer-social a:hover {
+    opacity: 0.7; /* Slight fade effect on hover */
+}
+
+.error-section {
+    padding: 400px 0px;
+    text-align: center;
+    font-size: 40px;
+}
+/* PHONES */
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 60px;
+        position: fixed; /* Position the navbar */
+        top: 0; /* Align to the top */
+        left: -100%; /* Start off-screen to the left */
+        width: 80%; /* Width of the sidebar menu */
+        height: 100%; /* Full height */
+        flex-direction: column; /* Stack the items vertically */
+        background-color: var(--gray-color); /* Background color of the sidebar */
+        overflow-y: auto; /* Enable scrolling if content is taller than screen */
+        transition: left 0.3s; /* Smoothly transition the left value */
+        padding-top: 30px; /* Adjust based on your site's header height */
+        border-top: #000 solid 2px;
+        /* Rest of your mobile styling for navbar-nav */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon on mobile */
+    }
+
+    /* When the 'active' class is added to 'navbar-nav' */
+    .navbar-nav.active {
+        left: 0; /* Slide in to be fully visible */
+    }
+
+    .navbar-nav li {
+        padding: 12px 20px; /* Spacing for the menu items */
+        border-bottom: 1px solid #cccccc; /* Optional: add a separator between items */
+    }
+
+    .navbar-nav li a {
+        color: #333; /* Text color for the links */
+        /* Rest of your link styles */
+    }
+
+    .welcome-text {
+        padding: 10px 20px 20px 20px;
+    }
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 480px) {
+    .welcome-section {
+        padding: 0px 00px 20px 0px;
+    }
+
+    .site-footer {
+        padding: 20px 10px; /* Adjust padding for mobile */
+    }
+    
+    .footer-logo,
+    .footer-social {
+        justify-content: center; /* Center content on mobile */
+        flex: 1 0 100%; /* Forces logo to take full width on wrap */
+    }
+
+    .footer-social a {
+        margin: 15px 10px 0px 10px; /* Less margin for smaller screens */
+        font-size: 24px; /* Smaller icons on mobile */
+    }
+}

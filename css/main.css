@@ -1,14 +1,19 @@
 :root {
-    --brown-color: #471F1F;
-    --bisque-color: #F3E0C7;
-    --yellow-color: #FFFE87;
-    --pink-color: #FFB2B2;
-    --gray-color: #f2f2f2;
-
+    --lavender-color: #a586fb;
+    --purple-color: #989dfa;
+    --black-color: #181818;
+    --gray-color: #bbb;
+    --white-color: #FFFF;
     --font-size-mobiles: 1.1em;
 }
+h1 {
+    color: var(--white-color);
+}
+h2 {
+    font-size: 2.5em;
+}
 body {
-    background-color: var(--gray-color); /* This is a light grey color */
+    background-color: var(--black-color); /* This is a light grey color */
     font-family: 'Poppins', sans-serif;
     font-size: 1.2em; /* TODO */
     padding: 0;
@@ -17,11 +22,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-.content-wrapper {
-    position: relative;
-    max-width: 1920px;
-    flex: 1;
 }
 .navbar {
     display: flex;
@@ -42,7 +42,7 @@ body {
     border: none;
 }
 .hamburger i {
-    color: var(--brown-color);
+    color: var(--white-color);
 }
 /* Optional: Add a transition for the transform */
 .hamburger, .hamburger::before {
@@ -72,10 +72,9 @@ body {
 
 .navbar-nav a {
     text-decoration: none;
-    color: var(--brown-color); 
+    color: var(--gray-color); 
     font-weight: 500;
     text-decoration: none;
-    color: black; /* Or whatever your default color is */
     transition: font-weight 0.1s ease, border-bottom 0.1s ease, letter-spacing 0.1s ease;
     /* Initial border-bottom is transparent to prevent layout shift */
     border-bottom: 3px solid transparent;
@@ -84,19 +83,27 @@ body {
 .navbar-nav a:hover,
 .navbar-nav a:focus { /* focus is for accessibility */
     /*font-weight: 700; */
-    border-bottom: 3px solid var(--pink-color); /* Your chosen color for the underline */
+    border-bottom: 3px solid var(--white-color); /* Your chosen color for the underline */
+}
+
+.content-wrapper {
+    position: relative;
+    max-width: 1920px;
+    flex: 1;
+    margin: 0 auto;
 }
 
 .welcome-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    max-width: 600px; 
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding: 0px 20px 20px 20px;
 }
 
-h2 {
-    font-size: 2.5em;
+.welcome-container {
+    color: var(--gray-color);
 }
 
 .site-footer {
@@ -105,13 +112,12 @@ h2 {
     align-items: center;
     padding: 20px 20px 20px 20px;
     margin: 0;
-    background-color: var(--brown-color); /* Example dark brown background */
     flex-wrap: wrap; /* Ensure content can wrap as needed */
 }
 
 .footer-logo {
     display: flex;
-    color: var(--pink-color); /* White color for the logo text */
+    color: var(--white-color); /* White color for the logo text */
 }
 .footer-logo img {
     margin-left: 2px; /* Space between text and image */
@@ -127,7 +133,7 @@ h2 {
 }
 
 .footer-social a {
-    color: var(--pink-color); /* White color for the icons */
+    color: var(--white-color); /* White color for the icons */
     text-decoration: none;
     margin: 0 15px;
     font-size: 30px; /* Example size for social icons */
@@ -153,7 +159,6 @@ h2 {
         width: 80%; /* Width of the sidebar menu */
         height: 100%; /* Full height */
         flex-direction: column; /* Stack the items vertically */
-        background-color: var(--gray-color); /* Background color of the sidebar */
         overflow-y: auto; /* Enable scrolling if content is taller than screen */
         transition: left 0.3s; /* Smoothly transition the left value */
         padding-top: 30px; /* Adjust based on your site's header height */
@@ -176,7 +181,7 @@ h2 {
     }
 
     .navbar-nav li a {
-        color: #333; /* Text color for the links */
+         /*color: #333; Text color for the links */
         /* Rest of your link styles */
     }
 

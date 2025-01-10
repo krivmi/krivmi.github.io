@@ -14,24 +14,21 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=KoHo&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
--->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href="favicon.png" rel="shortcut icon" type="image/png" alt="Milan Krivanek Favicon">
+    <link href="favicon.svg" rel="shortcut icon" type="image/png" alt="Milan Krivanek Favicon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar" id="top">
         <div class="navbar-logo">
-            <a href="index.html">
-                <img src="img/logos/logo.png" alt="Milan's Logo">
-            </a>
+            <img src="img/logos/logo-gray.svg" alt="Milan's Logo">
+            <h1 class="navbar-logo-text">Milan Krivanek</h1>
         </div>
         <!-- Hamburger Icon -->
         <button class="hamburger" aria-label="Open navigation menu" onclick="toggleNav()">
@@ -47,32 +44,70 @@
         <section class="welcome-section">
             <div class="welcome-container">
                 <h1>Hey, I'm Milan!</h1>
-                <p>I'm an enthusiastic developer passionate about crafting software and doing fun projects. Welcome to
-                    my little corner of the web! 🌐✨
-                    <br><br>Here, you'll find a glimpse into who I am and what I love to do. Feel free to explore and
-                    stay a while! 💡
+                <p>
+                    I'm an enthusiastic developer passionate about crafting software and doing fun projects. Welcome to
+                    my little website!
+                    <br><br>
+                    Here, you'll find a glimpse into who I am and what I love to do. Feel free to explore and
+                    stay a while!
                 </p>
-                <br><br>
-                <h3 style="color: red">/> Web under construction /></h3>
             </div>
-            <picture>
-                <img src="img/logos/logo.png" alt="" class="welcome-image">
+            <picture class="welcome-picture">
+                <img src="img/lion_cyborg.png" alt="" class="welcome-image">
             </picture>
         </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <p class="projects-text">Here are some of my favourite projects I've worked on over the years.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>2022</h3>
+                    <a href="https://github.com/krivmi/VehicleVisualization" class="project-title">Vehicle Visualization</a>
+                    <p>A car application for interpretting ITS messages and visualizing traffic!</p>
+                    <div class="project-links">
+                        <a href="https://github.com/krivmi/VehicleVisualization" class="btn">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>2022</h3>
+                    <a href="https://github.com/krivmi/StencilShadows" class="project-title">Stencil Shadows</a>
+                    <p>an OpenGL implementation of the stencil shadow volume technique in C++.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/krivmi/StencilShadows" class="btn">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>2021</h3>
+                    <a href="https://github.com/krivmi/FrogAdventures" class="project-title">Frog Adventures</a>
+                    <p>Go on an adventure with a Fire frog and Water frog.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/krivmi/FrogAdventures" class="btn">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>2020</h3>
+                    <a href="https://github.com/krivmi/IoTControl" class="project-title">IoT Control</a>
+                    <p>An Android app for controling home devices.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/krivmi/IoTControl" class="btn">Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </section>
 
     <footer class="site-footer">
-        <div class="footer-logo">
-            <a href="#top">
-                <img src="img/logos/logo.png" alt="Adela's Logo">
-            </a>
-        </div>
         <div class="footer-social">
-            <a href="https://www.hiof.no/iio/english/people/aca/milank/index.html" target="_blank"
-                aria-label="HIOF website"><i class="fab fa-sith"></i></a>
-            <a href="https://github.com/krivmi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/krivmi" target="_blank" aria-label="LinkedIn"><i
-                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/krivmi" target="_blank" aria-label="GitHub">
+                <img src="img/icons/github.svg" alt="GitHub Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/krivmi" target="_blank" aria-label="LinkedIn">
+                <img src="img/icons/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.hiof.no/iio/english/people/aca/milank/index.html" target="_blank" aria-label="HIOF website">
+                <img src="img/icons/graduation-cap.svg" alt="HIOF Icon">
+            </a>
         </div>
     </footer>
     <script src="js/jquery-3.3.1.min.js"></script>

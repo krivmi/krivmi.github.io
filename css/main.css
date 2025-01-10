@@ -3,35 +3,51 @@
     --purple-color: #989dfa;
     --black-color: #181818;
     --gray-color: #bbb;
+    --gray-border-color: #3d3d3d;
     --white-color: #FFFF;
-    --font-size-mobiles: 1.1em;
+    
+    --font-size-sm: 1rem;     /* 16px */
+    --font-size-md: 1.125rem; /* 18px */
+    --font-size-text: 1.3rem; /* 21px */
+    --font-size-lg: 1.5rem;   /* 24px */
+    --font-size-headers: 1.75rem;   /* 28px */
+    --font-size-xl: 2rem;     /* 32px */
+    --font-size-xxl: 3rem;    /* 48px */
 }
-h1 {
-    color: var(--white-color);
-}
-h2 {
-    font-size: 2.5em;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
 body {
     background-color: var(--black-color); /* This is a light grey color */
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em; /* TODO */
-    padding: 0;
-    margin: 0;
+    font-family: "Kanit", serif;
+    min-height: 100vh;
     height: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    border-bottom: 1px solid var(--gray-border-color);
 }
 .navbar-logo {
+    height: 40px;
     display: flex;
     align-items: center;
+}
+.navbar-logo img {
+    height: 40px;
+    line-height: 34px; /* Ensure the logo has the same line height as the text */
+}
+.navbar-logo-text {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    margin-left: 10px;
+    color: var(--white-color);
 }
 
 .hamburger {
@@ -55,11 +71,6 @@ body {
     width: 100%; /* This can also help enforce no-scrolling */
     position: fixed; /* Lock the position */
 }
-
-.navbar-logo img {
-    margin-left: 2px; /* Space between text and image */
-    height: 34px;
-}
 .navbar-nav {
     list-style: none;
     display: flex;
@@ -67,7 +78,7 @@ body {
 }
 .navbar-nav li {
     padding: 0 15px;
-    font-size: 25px;
+    font-size: var(--font-size-text);
 }
 
 .navbar-nav a {
@@ -83,28 +94,109 @@ body {
 .navbar-nav a:hover,
 .navbar-nav a:focus { /* focus is for accessibility */
     /*font-weight: 700; */
-    border-bottom: 3px solid var(--white-color); /* Your chosen color for the underline */
+    color: var(--lavender-color); /* Your chosen color for the underline */
 }
 
 .content-wrapper {
     position: relative;
-    max-width: 1920px;
+    max-width: 1024px;
     width: 100%;
-    flex: 1;
     margin: 0 auto;
 }
 
 .welcome-section {
-    display: flex;
-    flex-direction: row;
-    max-width: 600px; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+.welcome-container {
+    flex: 2; /* Make it take up equal space as its sibling */
+    padding-right: 20px; /* Add spacing between text and image */
+    color: var(--gray-color);
     text-align: left;
-    padding: 0px 20px 20px 20px;
+    line-height: 1.5; /* Adjust this value as needed */
+}
+.welcome-container h1 {
+    color: var(--white-color);
+    font-size: var(--font-size-xxl);
+    margin-bottom: 30px;
+}
+.welcome-container p {
+    font-size: var(--font-size-text);
+}
+.welcome-picture {
+    flex: 1; /* Equal space for the picture section */
+    display: flex; /* Allow image to center */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+.welcome-picture img {
+    max-width: 100%; /* Ensure the image fits its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: round the corners */
 }
 
-.welcome-container {
-    color: var(--gray-color);
+.projects {
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
+.projects h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 10px;
+}
+.projects p {
+    margin-bottom: 15px;
+    color: #ccc;
+    font-size: var(--font-size-md);
+}
+.projects-text {
+    font-size: var(--font-size-text);
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 15px;
+}
+.project-card {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+.project-card h3 {
+    font-size: var(--font-size-md);
+    color: #aaa;
+    margin-bottom: 10px;
+}
+.project-title {
+    font-size: var(--font-size-lg);
+    color: var(--purple-color);
+    text-decoration: none;
+}
+.project-title:hover {
+    text-decoration: underline;
+}
+.project-links {
+    margin-top: 10px;
+}
+.project-links .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    background-color: #333;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    transition: background-color 0.2s ease;
+}
+.project-links .btn:hover {
+    background-color: #555;
 }
 
 .site-footer {
@@ -113,44 +205,27 @@ body {
     align-items: center;
     padding: 20px 20px 20px 20px;
     margin: 0;
-    flex-wrap: wrap; /* Ensure content can wrap as needed */
+    flex-wrap: wrap;
 }
-
-.footer-logo {
-    display: flex;
-    color: var(--white-color); /* White color for the logo text */
-}
-.footer-logo img {
-    margin-left: 2px; /* Space between text and image */
-    height: 34px;
-}
-
-.footer-logo span {
-    font-style: italic;
-}
-
 .footer-social {
     display: flex;
+    margin: 0 auto;
+}
+.footer-social img {
+    width: 32px;
+    height: 32px;
 }
 
 .footer-social a {
-    color: var(--white-color); /* White color for the icons */
     text-decoration: none;
     margin: 0 15px;
-    font-size: 30px; /* Example size for social icons */
 }
 
 .footer-social a:hover {
     opacity: 0.7; /* Slight fade effect on hover */
 }
 
-.error-section {
-    padding: 400px 0px;
-    text-align: center;
-    font-size: 40px;
-}
-/* PHONES */
-
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
         margin-top: 60px;
@@ -197,18 +272,19 @@ body {
         padding: 0px 00px 20px 0px;
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
     .site-footer {
         padding: 20px 10px; /* Adjust padding for mobile */
     }
     
-    .footer-logo,
     .footer-social {
         justify-content: center; /* Center content on mobile */
-        flex: 1 0 100%; /* Forces logo to take full width on wrap */
     }
 
     .footer-social a {
         margin: 15px 10px 0px 10px; /* Less margin for smaller screens */
-        font-size: 24px; /* Smaller icons on mobile */
     }
 }

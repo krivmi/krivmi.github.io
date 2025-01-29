@@ -20,7 +20,7 @@ function toggleNav() {
   var body = document.body;
 
   // Toggle a class or directly apply styles to prevent body scroll
-  body.classList.toggle('no-scroll');
+  //body.classList.toggle('no-scroll');
 
   // Toggle classes for the hamburger and 'X' icons
   if (icon.classList.contains('fa-bars')) {

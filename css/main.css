@@ -27,7 +27,42 @@ body {
     display: flex;
     flex-direction: column;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+.section-divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0; /* Space above and below the divider */
+}
+
+.line {
+    width: 100%; /* Full-width horizontal line */
+    border: none;
+    border-top: 1px solid var(--gray-border-color); /* Style the line */
+    position: relative;
+    z-index: 1;
+}
+
+.icon {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--gray-border-color);
+    padding: 2px; /* Space around the icon for separation */
+    border-radius: 50%; /* Make the icon's background perfectly round */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+    max-width: 40px; /* Adjust size of the logo */
+    max-height: 40px; /* Keep proportions consistent */
+}
+
+
 .navbar {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,6 +137,7 @@ body {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    padding: 15px;
 }
 
 .welcome-section {
@@ -110,10 +146,9 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 20px;
 }
 .welcome-container {
-    flex: 2; /* Make it take up equal space as its sibling */
+    flex: 4; /* Make it take up equal space as its sibling */
     padding-right: 20px; /* Add spacing between text and image */
     color: var(--gray-color);
     text-align: left;
@@ -128,7 +163,7 @@ body {
     font-size: var(--font-size-text);
 }
 .welcome-picture {
-    flex: 1; /* Equal space for the picture section */
+    flex: 2; /* Equal space for the picture section */
     display: flex; /* Allow image to center */
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
@@ -139,18 +174,50 @@ body {
     border-radius: 8px; /* Optional: round the corners */
 }
 
+.passions {
+    text-align: left;
+    color: var(--white-color);
+}
+.passions h2 {
+    font-size: var(--font-size-xl);
+    color: var(--white-color);
+    margin-bottom: 10px;
+}
+.passions p {
+    margin-bottom: 15px;
+    color: var(--gray-color);
+    font-size: var(--font-size-md);
+}
+
+.float-image {
+    float: left; /* Obrázek zarovnaný vlevo */
+    width: 40%; /* Přizpůsob velikost (můžeš upravit) */
+    max-width: 400px;
+    margin: 0 20px 20px 0; /* Mezera kolem obrázku */
+    border-radius: 10px; /* Zaoblené rohy */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín pro lepší vzhled */
+}
+
+.passion-container p {
+    text-align: justify; /* Zarovnání textu pro hezké obtékání */
+    line-height: 1.6; /* Lepší čitelnost textu */
+}
+
+.text-content {
+    flex: 1;
+}
+
 .projects {
-    text-align: center;
-    padding: 15px;
-    color: #fff;
+    text-align: left;
 }
 .projects h2 {
     font-size: var(--font-size-xl);
+    color: var(--white-color);
     margin-bottom: 10px;
 }
 .projects p {
     margin-bottom: 15px;
-    color: #ccc;
+    color: var(--gray-color);
     font-size: var(--font-size-md);
 }
 .projects-text {
@@ -160,7 +227,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    padding: 0 15px;
+    padding: 0 0px;
 }
 .project-card {
     background-color: #1c1c1c;
@@ -185,7 +252,8 @@ body {
     margin-top: 10px;
 }
 .project-links .btn {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: none;
     padding: 0.5rem 1rem;
     margin-right: 0.5rem;
     border-radius: 5px;
@@ -200,11 +268,14 @@ body {
 }
 
 .site-footer {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px 20px 20px;
-    margin: 0;
+    padding: 20px;
+    border-top: 1px solid var(--gray-border-color);
     flex-wrap: wrap;
 }
 .footer-social {
@@ -263,6 +334,10 @@ body {
 
     .welcome-text {
         padding: 10px 20px 20px 20px;
+    }
+
+    .float-image {
+        width: 50%;
     }
 }
 

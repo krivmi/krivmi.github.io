@@ -17,8 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="favicon.svg" rel="shortcut icon" type="image/png" alt="Milan Krivanek Favicon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
@@ -35,9 +37,9 @@
             <i class="fas fa-bars"></i>
         </button>
         <ul class="navbar-nav">
-            <li><a href="#">Bio</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <section class="content-wrapper">
@@ -56,13 +58,65 @@
                 <img src="img/lion_cyborg.png" alt="" class="welcome-image">
             </picture>
         </section>
-        <section class="projects">
+
+        <div class="section-divider">
+            <hr class="line">
+            <img src="img/logos/logo-gray.svg" alt="Milan's Logo" class="icon">
+        </div>
+
+        <section class="passions">
+            <div class="passion-container" id="bio">
+                <h2>A little more about me...</h2>
+                <p>
+                    I have a deep passion for working on projects that blend software and hardware, especially in the realm of IoT. I love setting up various sensors around my home to collect and analyze data, whether it’s for environmental monitoring, automation, or just for the fun of exploring new possibilities. Taking that data and building meaningful applications—especially Android apps that provide useful insights—gives me a great sense of accomplishment. I also enjoy creating websites, both for myself and for friends, as a way to experiment with design, functionality, and new web technologies.
+                </p>
+
+                <div class="passion-content">
+                    <img src="img/myself_AI.png" class="float-image" alt="AI version of myself">
+                    <p>
+                        On the hardware side, I want to expand my knowledge so I can create devices from scratch, bringing
+                        together electronics and programming to build unique gadgets. My interest in 3D printing also ties 
+                        into this, as I’ve already completed several projects where I designed and fabricated custom components. 
+                        It’s exciting to see a concept take shape physically, whether it’s a functional tool, a case for a DIY 
+                        device, or just something fun. As I continue learning and experimenting, I’m always looking for new 
+                        challenges that push my skills further and let me create something truly unique.
+                    </p>
+                    <p>
+                        Gaming has always been a huge part of my life, not just playing them but also coding my own. I find game development fascinating, from designing mechanics to writing efficient code that brings everything together. One of my ultimate dreams is to build my own game engine, something that could power an RPG similar to Gothic, a series I’ve always admired. Learning the intricacies of engine development would allow me to craft the perfect world and gameplay experience exactly the way I envision it.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="section-divider">
+            <hr class="line">
+            <img src="img/logos/logo-gray.svg" alt="Milan's Logo" class="icon">
+        </div>
+
+        <section class="projects" id="projects">
             <h2>Projects</h2>
             <p class="projects-text">Here are some of my favourite projects I've worked on over the years.</p>
             <div class="projects-grid">
                 <div class="project-card">
+                    <h3>2025</h3>
+                    <a href="https://github.com/krivmi/krivmi.github.io" class="project-title">Canteen Menu</a>
+                    <p>A simple Android Widget for displaying a menu in our organization.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/krivmi/krivmi.github.io" class="btn">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>2024</h3>
+                    <a href="https://github.com/krivmi/krivmi.github.io" class="project-title">This website</a>
+                    <p>The source code of this website.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/krivmi/krivmi.github.io" class="btn">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
                     <h3>2022</h3>
-                    <a href="https://github.com/krivmi/VehicleVisualization" class="project-title">Vehicle Visualization</a>
+                    <a href="https://github.com/krivmi/VehicleVisualization" class="project-title">Vehicle
+                        Visualization</a>
                     <p>A car application for interpretting ITS messages and visualizing traffic!</p>
                     <div class="project-links">
                         <a href="https://github.com/krivmi/VehicleVisualization" class="btn">Demo</a>
@@ -94,7 +148,32 @@
                 </div>
             </div>
         </section>
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                <p>If you’d like to get in touch, feel free to reach out through any of the platforms below!</p>
         
+                <div class="contact-links">
+                    <script type="text/javascript">
+                        var p1 = ".no";
+                        var d2 = "mila";
+                        var t3 = "hiof";
+                        var u8 = "nk";
+                        var us = d2 + u8;
+                        var man = t3 + p1;
+                        document.write('<a href="mailto:' + us + '@' + man + '">' + us + '@' + man + '</a>');
+                    </script>
+                    
+                    <a href="https://www.linkedin.com/in/krivmi" class="contact-link" target="_blank" title="LinkedIn">
+                        LinkedIn
+                    </a>
+        
+                    <a href="https://github.com/krivmi" class="contact-link" target="_blank" title="GitHub">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
     </section>
 
     <footer class="site-footer">
@@ -105,13 +184,13 @@
             <a href="https://www.linkedin.com/in/krivmi" target="_blank" aria-label="LinkedIn">
                 <img src="img/icons/linkedin.svg" alt="LinkedIn Icon">
             </a>
-            <a href="https://www.hiof.no/iio/english/people/aca/milank/index.html" target="_blank" aria-label="HIOF website">
+            <a href="https://www.hiof.no/iio/english/people/aca/milank/index.html" target="_blank"
+                aria-label="HIOF website">
                 <img src="img/icons/graduation-cap.svg" alt="HIOF Icon">
             </a>
         </div>
     </footer>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery_slide.js"></script>
     <script src="js/js.js"></script>
 </body>
 

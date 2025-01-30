@@ -17,10 +17,11 @@ function toggleNav() {
   var nav = document.querySelector('.navbar-nav');
   var icon = document.querySelector('.hamburger i'); // Get the icon element
   nav.classList.toggle('active');
-  var body = document.body;
 
-  // Toggle a class or directly apply styles to prevent body scroll
-  //body.classList.toggle('no-scroll');
+  // Only disable scrolling if the screen width is small
+  if (window.innerWidth <= 768) {
+    document.body.classList.toggle("no-scroll");
+  }
 
   // Toggle classes for the hamburger and 'X' icons
   if (icon.classList.contains('fa-bars')) {

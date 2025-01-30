@@ -319,14 +319,20 @@ html {
         position: fixed; /* Position the navbar */
         top: 0; /* Align to the top */
         left: -100%; /* Start off-screen to the left */
-        width: 80%; /* Width of the sidebar menu */
+        width: 100%; /* Width of the sidebar menu */
         height: 100%; /* Full height */
         flex-direction: column; /* Stack the items vertically */
         overflow-y: auto; /* Enable scrolling if content is taller than screen */
         transition: left 0.3s; /* Smoothly transition the left value */
-        padding-top: 30px; /* Adjust based on your site's header height */
-        border-top: #000 solid 2px;
+        padding-top: 0px; /* Adjust based on your site's header height */
+        border-top: var(--gray-border-color) solid 1px;
+        background-color: var(--black-color); /* Background color for the navbar */
         /* Rest of your mobile styling for navbar-nav */
+    }
+
+    body.no-scroll {
+        height: 100%;
+        overflow: hidden;
     }
 
     .hamburger {
@@ -340,7 +346,7 @@ html {
 
     .navbar-nav li {
         padding: 12px 20px; /* Spacing for the menu items */
-        border-bottom: 1px solid #cccccc; /* Optional: add a separator between items */
+        border-bottom: 1px solid var(--gray-border-color); /* Optional: add a separator between items */
     }
 
     .navbar-nav li a {

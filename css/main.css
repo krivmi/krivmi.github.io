@@ -26,6 +26,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    color: var(--gray-color);
 }
 html {
     scroll-behavior: smooth;
@@ -36,7 +37,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px 0; /* Space above and below the divider */
+    margin: 60px 0; /* Space above and below the divider */
 }
 
 .line {
@@ -150,7 +151,6 @@ html {
 .welcome-container {
     flex: 4; /* Make it take up equal space as its sibling */
     padding-right: 20px; /* Add spacing between text and image */
-    color: var(--gray-color);
     text-align: left;
     line-height: 1.5; /* Adjust this value as needed */
 }
@@ -176,7 +176,6 @@ html {
 
 .passions {
     text-align: left;
-    color: var(--white-color);
 }
 .passions h2 {
     font-size: var(--font-size-xl);
@@ -185,7 +184,6 @@ html {
 }
 .passions p {
     margin-bottom: 15px;
-    color: var(--gray-color);
     font-size: var(--font-size-md);
 }
 
@@ -217,7 +215,6 @@ html {
 }
 .projects p {
     margin-bottom: 15px;
-    color: var(--gray-color);
     font-size: var(--font-size-md);
 }
 .projects-text {
@@ -267,6 +264,17 @@ html {
     background-color: #555;
 }
 
+.contact {
+    margin: 40px 0px 0px 0px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: var(--font-size-xl);
+    color: var(--white-color);
+    margin-bottom: 10px;
+}
+
 .site-footer {
     max-width: 1024px;
     width: 100%;
@@ -275,7 +283,7 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border-top: 1px solid var(--gray-border-color);
+    /*border-top: 1px solid var(--gray-border-color);*/
     flex-wrap: wrap;
 }
 .footer-social {
@@ -298,6 +306,14 @@ html {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+    :root {
+        --font-size-md: 1rem; /* 18px */
+        --font-size-text: 1.125rem; /* 21px */
+        --font-size-lg: 1.3rem;   /* 24px */
+        --font-size-headers: 1.5rem;   /* 28px */
+        --font-size-xl: 1.75rem;     /* 32px */
+        --font-size-xxl: 2rem;    /* 48px */
+    }
     .navbar-nav {
         margin-top: 60px;
         position: fixed; /* Position the navbar */
@@ -343,8 +359,39 @@ html {
 
 /* Media Query for Mobile Phones */
 @media (max-width: 480px) {
+
+    :root {
+        --font-size-md: 1rem; /* 18px */
+        --font-size-text: 1.125rem; /* 21px */
+        --font-size-lg: 1.3rem;   /* 24px */
+        --font-size-headers: 1.5rem;   /* 28px */
+        --font-size-xl: 1.75rem;     /* 32px */
+        --font-size-xxl: 2rem;    /* 48px */
+    }
+
+    .section-divider {
+        margin: 40px 0;
+    }
+    .icon {
+        max-width: 30px;
+        max-height: 30px;
+    }
     .welcome-section {
-        padding: 0px 00px 20px 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .welcome-container {
+        padding-right: 0px;
+    }
+    
+    .welcome-picture {
+        width: 100%;
+    }
+
+    .float-image {
+        width: 100%;
     }
 
     .projects-grid {

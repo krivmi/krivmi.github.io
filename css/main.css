@@ -4,6 +4,7 @@
     --black-color: #181818;
     --gray-color: #bbb;
     --gray-border-color: #3d3d3d;
+    --gray-tile-color: #1c1c1c;
     --white-color: #FFFF;
     
     --font-size-sm: 1rem;     /* 16px */
@@ -32,12 +33,19 @@ html {
     scroll-behavior: smooth;
 }
 
+h2 {
+    font-size: var(--font-size-xl);
+    color: var(--white-color);
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
 .section-divider {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px 0; /* Space above and below the divider */
+    margin: 60px 0px 45px 0px; /* Space above and below the divider */
 }
 
 .line {
@@ -174,13 +182,33 @@ html {
     border-radius: 8px; /* Optional: round the corners */
 }
 
+.cv {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--gray-tile-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cv h2 {
+    text-align: center;
+}
+
+.cv p {
+    margin: 15px 0;
+    line-height: 1.7;
+}
+
+.cv strong {
+    color: var(--purple-color);
+    font-size: var(--font-size-md);
+    font-weight: 400;
+}
+
+
 .passions {
     text-align: left;
-}
-.passions h2 {
-    font-size: var(--font-size-xl);
-    color: var(--white-color);
-    margin-bottom: 10px;
 }
 .passions p {
     margin-bottom: 15px;
@@ -196,7 +224,7 @@ html {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín pro lepší vzhled */
 }
 
-.passion-container p {
+.passions p {
     text-align: justify; /* Zarovnání textu pro hezké obtékání */
     line-height: 1.6; /* Lepší čitelnost textu */
 }
@@ -207,11 +235,6 @@ html {
 
 .projects {
     text-align: left;
-}
-.projects h2 {
-    font-size: var(--font-size-xl);
-    color: var(--white-color);
-    margin-bottom: 10px;
 }
 .projects p {
     margin-bottom: 15px;
@@ -227,7 +250,7 @@ html {
     padding: 0 0px;
 }
 .project-card {
-    background-color: #1c1c1c;
+    background-color: var(--gray-tile-color);
     padding: 30px;
     border-radius: 8px;
     transition: transform 0.2s ease;
@@ -269,37 +292,20 @@ html {
     text-align: center;
 }
 
-.contact h2 {
-    font-size: var(--font-size-xl);
-    color: var(--white-color);
-    margin-bottom: 10px;
-}
-
-.site-footer {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    /*border-top: 1px solid var(--gray-border-color);*/
-    flex-wrap: wrap;
-}
 .footer-social {
     display: flex;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 30px auto;
 }
 .footer-social img {
     width: 32px;
     height: 32px;
 }
-
 .footer-social a {
     text-decoration: none;
     margin: 0 15px;
 }
-
 .footer-social a:hover {
     opacity: 0.7; /* Slight fade effect on hover */
 }
@@ -373,6 +379,10 @@ html {
         --font-size-headers: 1.5rem;   /* 28px */
         --font-size-xl: 1.75rem;     /* 32px */
         --font-size-xxl: 2rem;    /* 48px */
+    }
+
+    .hamburger {
+        font-size: 27px; /* Icon size */
     }
 
     .section-divider {

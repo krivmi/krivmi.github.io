@@ -157,10 +157,10 @@ h2 {
     width: 100%;
 }
 .welcome-container {
-    flex: 4; /* Make it take up equal space as its sibling */
-    padding-right: 20px; /* Add spacing between text and image */
+    flex: 3; 
+    padding-right: 20px;
     text-align: left;
-    line-height: 1.5; /* Adjust this value as needed */
+    line-height: 1.5;
 }
 .welcome-container h1 {
     color: var(--white-color);
@@ -171,15 +171,15 @@ h2 {
     font-size: var(--font-size-text);
 }
 .welcome-picture {
-    flex: 2; /* Equal space for the picture section */
-    display: flex; /* Allow image to center */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .welcome-picture img {
-    max-width: 100%; /* Ensure the image fits its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: round the corners */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .cv {
@@ -210,9 +210,19 @@ h2 {
 .passions {
     text-align: left;
 }
+.passions span {
+    color: var(--purple-color);
+}
 .passions p {
     margin-bottom: 15px;
     font-size: var(--font-size-md);
+}
+.passions a {
+    text-decoration: none;
+    color: var(--purple-color);
+}
+.passions a:hover {
+    text-decoration: underline;
 }
 
 .float-image {
@@ -360,6 +370,13 @@ h2 {
         /* Rest of your link styles */
     }
 
+    .welcome-container {
+        flex: 1; 
+    }
+    .welcome-picture {
+        flex: 1;
+    }
+
     .welcome-text {
         padding: 10px 20px 20px 20px;
     }
@@ -403,7 +420,8 @@ h2 {
     }
     
     .welcome-picture {
-        width: 100%;
+        margin-top: 15px;
+
     }
 
     .float-image {
